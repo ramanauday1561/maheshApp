@@ -1,0 +1,516 @@
+input {
+    color: black;
+}
+
+.bookNowDiv {
+    height: 100vh;
+    background: #fafafa;
+    overflow: hidden;
+    position: relative;
+}
+
+.travel-nav {
+    background: #2C2A42;
+    height: 64px;
+    color: white;
+    display: flex;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.activeLink {
+    background: #F6FF00;
+    transform: scale(1.1);
+}
+
+.travel-details {
+    height: inherit;
+    width: 20%;
+    text-align: center;
+}
+
+.travelling-name {
+    color: #A6AE07;
+    display: block;
+    padding-top: 10px;
+}
+
+.travel-date {
+    height: inherit;
+    width: 12%;
+    text-align: center;
+}
+
+.on-name {
+    color: #A6AE07;
+    display: block;
+    padding-top: 10px;
+}
+
+.time {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    border: 3px solid #00b2ac;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    margin: auto 0;
+    /* transition: all 0.3s ease-in-out; */
+}
+
+.time img {
+    margin: 7px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.modify-container {
+    position: absolute;
+    text-align: center;
+    height: calc(100%);
+    margin-left: calc(48%);
+}
+
+.modify-container span {
+    background: white;
+    height: 26px;
+    display: block;
+    width: 88px;
+    margin-top: 16px;
+    border-radius: 10px;
+    color: black;
+    padding-top: 2px;
+}
+
+.all-filters {
+    margin-top: 25px;
+    margin-right: 20px;
+    display: flex;
+}
+
+.all-filters div {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.all-filters div:hover {
+    transform: scale(1.2);
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.ml10 {
+    margin-left: 15px;
+}
+
+.loading-container {
+    background-color: #FDFDFD;
+    margin-top: 0px;
+    height: inherit;
+    padding: 30px;
+    height: calc(100% - 131px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-container img {
+    width:70%;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.card {
+    margin: 8px;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    /* width: calc(100%); */
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-container {
+    display: flex;
+    padding: 7px;
+}
+
+.width-20p {
+    /* border-right: 1px solid; */
+    margin: auto 0;
+    text-align: center;
+    width: 20%;
+}
+
+.vl {
+    border-left: 1px solid black;
+    height: 100%;
+}
+
+.book-now-button {
+    background-color: #F6FF00 !important;
+    border-color: snow !important;
+    transition: all 0.3s ease;
+}
+
+.book-now-button:hover {
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    display: flex;
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 76%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 15px;
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.booking-info {
+    display: flex;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.text-available,.text-filling,.text-sold {
+    margin: auto;
+    margin-right: 5px;
+}
+
+.box-available {
+    height: 20px;
+    width: 20px;
+    background: #009CFF;
+    margin: 3px;
+}
+
+.box-filling {
+    height: 20px;
+    width: 20px;
+    background: #F6FF00;
+    margin: 3px;
+}
+
+.box-sold {
+    height: 20px;
+    width: 20px;
+    background: #FF0000;
+    margin: 3px;
+}
+
+.car-details img {
+    height: 40px;
+}
+
+.user-details img {
+    height: 40px;
+}
+
+.wallet-details img {
+    height: 40px;
+}
+
+.success-details img {
+    height: 40px;
+}
+
+.modal-images {
+    width: calc(8%);
+    text-align: center;
+}
+
+.modal-images div {
+    padding: 8px;
+    margin: 40px 0;
+}
+
+.modal-content-details {
+    display: flex;
+    border-radius: 0 15px 15px 0;
+    width: calc(92%);
+    background: #2C2A42;
+    color: white;
+    justify-content: center;
+}
+
+.about-detail1 {
+    width: calc(40%);
+    text-align: center;
+    height: calc(100%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px 0;
+}
+
+.about-detail1 img {
+    width: calc(40%);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.yellow {
+    color: #F4FF00;
+}
+
+.about-detail2 {
+    width: calc(40%);
+    text-align: center;
+    height: calc(100%);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 10px 0;
+}
+
+.total-seats {
+    height: 40px;
+    width: 40px;
+    /* margin: auto; */
+    padding: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border: 1px solid;
+    margin-top: 5px;
+    border-radius: 3px;
+}
+
+.terms-conditions {
+    color:#828282;
+}
+
+.travelling-through {
+    display: flex;
+    flex-direction: column;
+    width: calc(20%);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.travelling-through .title {
+    margin-top: 10px;
+    color: #A2AB00;    
+}
+
+.user-details-info {
+    display: flex;
+    width: 500px;
+    text-align: center;
+    /* justify-content: center; */
+    margin: 10px 0;
+    flex-direction: column;
+}
+
+.user-details-info div {
+    margin-bottom: 5px;
+}
+
+.user-input-name {
+    height: 40px;
+    margin-right: 10px;
+    width: 200px;
+    padding-left: 6px;
+}
+
+.user-input-age,.user-input-gender {
+    height: 40px;
+    margin-right: 10px;
+    width: 100px;
+    padding-left: 6px;
+}
+
+.user-address input {
+    width: 427px;
+    height: 40px;
+    margin-right: 10px;
+    padding-left: 6px;
+}
+
+.user-street input {
+    height: 40px;
+    margin-right: 10px;
+    width: 207px;
+}
+
+.user-dropping input {
+    height: 40px;
+    margin-right: 10px;
+    width: 207px;
+}
+
+.user-details-save input {
+    width: 427px;
+}
+
+.card-details {
+    width: calc(60%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-details div {
+    width: 400px;
+    margin: auto;
+}
+
+.card-name, .card-number {
+    width: calc(100%);
+    height: 40px;
+    padding-left: 5px;
+}
+
+.user-card-date input {
+    height: 40px;
+    width: 193px;
+}
+
+.user-card-date .card-expire-data {
+    margin-right: 10.3px;
+}
+
+.cash-on-delivery {
+    font-size: 24px;
+}
+
+.cash-on-delivery input {
+    zoom: 1.8;
+    margin-right: 5px;
+}
+
+.card-details-save button {
+    width: 250px;
+}
+
+.your-details {
+    width: calc(40%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.success-page {
+    width: calc(80%);
+    text-align: center;
+}
+
+.check {
+    text-align: center;
+    font-size: 40px;
+}
+
+.booking-details {
+}
+
+.booking-details .header {
+    width: calc(100%);
+    color: black;
+    display: flex;
+    height: 30px;
+    align-items: center;
+    background: #E8E8EA;
+}
+
+.booking-details .w-10 {
+    width: calc(10%);
+}
+
+.booking-details .w-90-4 {
+    width: calc(22.5%);
+}
+
+.booking-details .body-content {
+    height: 40px;
+    background: #B9B8C0;
+}
+
+.money-booking {
+    margin-top: 10px;
+    width: calc(100%);
+    display: flex;
+}
+
+.money {
+    width: calc(50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.money button {
+    width: 200px;
+    margin: auto;
+    margin-top: 5px;
+}
+
+.get-details {
+    width: calc(50%);
+}
+
+.get-details input {
+    height: 30px;
+    width: 200px;
+    padding-left: 5px;
+    margin-bottom: 10px;
+}
+
+.get-details .social-networks i {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.data-container {
+    overflow: scroll;
+    height: calc(100% - 126px);
+}

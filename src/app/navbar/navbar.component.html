@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="">
+        <img src="assets/logo.png" alt="">
+      </a>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <li>
+        <a routerLink="/home" (click)="routeTo(0)" class="navbar-desktop-menu-item whiteColor" id="about" [ngClass]="{'active': currentValue === 1 }">About</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="routeTo(1)" class="navbar-desktop-menu-item whiteColor" id="tour" [ngClass]="{'active': currentValue === 2 }">Tour</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="routeTo(2)" class="navbar-desktop-menu-item whiteColor" id="pricing" [ngClass]="{'active': currentValue === 3 }">Pricing</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="routeTo(3)" class="navbar-desktop-menu-item whiteColor" id="blog" [ngClass]="{'active': currentValue === 4 }">Blog</a>
+      </li>
+      <li>
+        <a routerLink="/" (click)="routeTo(4)" class="navbar-desktop-menu-item whiteColor" id="contact">Contact</a>
+      </li>
+      <li>
+        <a routerLink="/liveTracking"  routerLinkActive="active" class="navbar-desktop-menu-item whiteColor" id="liveTracking">Live Tracking</a>
+      </li>
+      <li>
+        <a routerLink="/" class="navbar-desktop-menu-item whiteColor" id="signup">Signup</a>
+      </li>
+      <li>
+        <a routerLink="/" class="navbar-desktop-menu-item whiteColor" id="signin">Signin</a>
+      </li>
+    </ul>
+  </div>
+</nav>

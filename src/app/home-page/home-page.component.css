@@ -1,0 +1,540 @@
+.homeDiv {
+    text-align: center;
+    margin-top: calc(10%);
+    /* position: relative; */
+}
+
+.flexGrow {
+    flex-grow: 1;
+}
+
+.flexGrow-3 {
+    flex-grow: 3;
+}
+
+#homePage {
+    overflow-x: hidden;
+}
+
+.home-container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.home-container .home-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;    
+    background: linear-gradient(to right, rgb(2, 114, 110) 0%, #00908C 100%);
+}
+
+.home-container {
+    background: linear-gradient(to right, rgb(2, 114, 110) 0%, #00908C 100%) !important;
+    color: white;
+}
+
+.home-background .bottom-background-container {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.home-background .bottom-background-container .city-timeline-background {
+    width: 100%;
+    height: 200px;
+    background: url("../../assets/images/home/city_timeline.png") repeat-x;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    bottom: 0;
+}
+
+.home-page-input-fields {
+    outline: 0;
+    border: 3px solid #00b2ac;
+    transition: all 0.15s ease-in-out;
+    text-align: left;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+.home-page-input-fields:focus {
+    outline: 0;
+    border: 3px solid #FFE900;
+}
+
+video {
+    margin-top: 18px;
+}
+
+.displayFlex {
+    display: flex;
+}
+
+.rideDiv {
+    font-size: 50px;
+    color: #FFE900;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Saira Condensed';
+    font-style: italic;
+}
+
+.opacity5 {
+    opacity: 0.5;
+}
+
+input {
+    text-align: center;
+}
+
+.glyphicon {
+    font-size: 24px;
+}
+
+#icon {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.userFields {
+    display: flex;
+    justify-content: center;
+}
+
+.transferDiv,.sunMoon {
+    margin: auto 0;
+}
+
+.transferDiv {
+    height: 46px;
+}
+
+.transferDiv #icon {
+    display: block;
+    margin: 11px 5px;
+    color: #FFE900;
+}
+
+.sunMoon {
+    width: 46px;
+    height: 46px;
+    margin-left: 20px;
+    border: 3px solid #00b2ac;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.sunMoon:hover, .sunMoon:focus {
+    border: 3px solid #FFE900;
+    box-shadow: 0 10px 12px 2px rgba(0,0,0,0.1);
+}
+
+.sunMoon:hover img, .sunMoon:focus img {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.sunMoon img {
+    margin: 10px 8px;
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: invert(1);
+    transform: scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    transition: all 0.3s ease-in-out;
+}
+
+#journeyInput {
+    margin-left: 10px;
+}
+
+.rightArrow {
+    position: absolute;
+    right: 10%;
+    bottom: 15%;
+}
+
+.leftArrow {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.secondDiv {
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 30px; */
+    text-align: center;
+}
+
+#secondDivFooter {
+    /* position: absolute; */
+    width: calc(90%);
+    margin-left: calc(5%);
+    bottom: 30px;
+}
+
+.rightArrow2 {
+    position: absolute;
+    right: 5%;
+    bottom: 50%;
+}
+
+.leftArrow2 {
+    position: absolute;
+    left: 5%;
+    bottom: 50%;
+}
+
+.img-responsive {
+    width: calc(100%);
+}
+
+.thirdDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.fourthDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkFareBtn {
+    border-radius: 25px !important;
+    background-color: #FFE900;
+    color: #008684;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 2px;
+    margin-top: 18px;
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+#checkFareBtn:hover, #checkFareBtn:focus, #checkFareBtn:active {
+    outline: 0;
+    box-shadow: 0 10px 14px 2px rgba(0,0,0,0.1);
+    background-color: #ffc700;
+}
+
+.imageDiv img {
+    width: calc(60%);
+    position: absolute;
+    top: calc(20%);
+    right: calc(-12%);
+}
+
+.textDiv {
+    width: calc(40%);
+    margin-top: calc(7%);
+    margin-left: calc(10%);
+}
+
+.whyZuDiv {
+    margin-top: calc(12%);
+    display: flex;
+}
+
+.whyZuDiv div {
+    width: calc(50%);
+}
+
+.whyZuDiv img {
+    height: 40px;
+    margin-left: 20px;
+}
+
+.whyZuDiv a {
+    margin-top: 10px;
+}
+
+.appImage {
+    height: 90vh;
+    position: absolute;
+    right: 75px;
+    bottom: 25px;
+    z-index: 1;
+    width: calc(15%);
+}
+
+.appImage img {
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;} 
+}
+
+.fadeOutAnimation {
+    animation: fadeOut 2s linear;
+}
+
+.whiteDiv {
+    position: absolute;
+    bottom: 0;
+    width: calc(100%);
+    height: 70px;
+    background: white;
+}
+
+.whiteDiv p {
+    margin-left: calc(5%);
+    margin-top: 20px;
+}
+
+.whiteDiv div {
+    font-size: 12px;
+    height: 25px;
+    width: 65px;
+    margin-top: 16px;
+    border-radius: 10px;
+    margin-left: calc(15%);
+    background: #0f80fb;
+    color: white;
+    padding-left: 20px;
+    padding-top: 5px;
+    box-shadow: 4px 7px rgba(15, 128, 251, 0.2);
+}
+
+.appText {
+    color: white;
+    margin-left: calc(15%);
+    margin-top: calc(17%);
+}
+
+.appText h1 {
+    font-size: 55px;
+}
+
+.androidDiv {
+    color: black;
+    background: yellow;
+    width: 140px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 70px;
+}
+
+.androidDiv div {
+    padding-top: 10px;
+    padding-left: 15px;
+}
+
+.androidDiv i {
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.learnTag {
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.videoDiv {
+    height: calc(100%-123px);
+}
+
+video {
+    width: calc(60%);
+}
+
+.slideOut {
+    animation: slide-out 0.5s forwards;
+    -webkit-animation: slide-out 0.5s forwards;
+}
+
+.navigation-arrows {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    transform: scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    transition: all 0.3s ease;
+}
+
+.navigation-arrows:hover {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+.navigation-arrows img {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    opacity: 0.6;
+}
+
+.mainCover {
+    /* background-image:url('../../assets/Cover.png') !important;
+    background-repeat:no-repeat !important;
+    background-size:cover !important; */
+    background-color: #3f8b8a;
+    background-image: url('../../assets/Cover.png') !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+}
+
+@keyframes slide-out {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+.slideIn {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(0%); }
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgba(255, 0, 0, 0.3);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 80px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 80px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 80px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 80px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 80px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.carImage {
+    position: absolute;
+    bottom: -27px;
+    height: 80px;
+    width: calc(100%);
+    -webkit-animation: drivingLeft 15s ease infinite;
+    animation: drivingLeft 15s ease infinite;
+}
+
+.carImage img {
+    height: 100%;
+}
+
+@keyframes drivingLeft {
+    from { transform:translateX(-5%); }
+    to { transform: translateX(100%); }
+}
+
+.carImage2 {
+    position: absolute;
+    bottom: -9px;
+    height: 40px;
+    width: calc(100%);
+    -webkit-animation: drivingRight 20s ease infinite;
+    animation: drivingRight 20s ease infinite;
+}
+
+.carImage2 img {
+    height: 100%;
+}
+
+@keyframes drivingRight {
+    from { transform:translateX(100%); }
+    to { transform: translateX(-10%); }
+}
+
+.animated {
+    -webkit-animation-duration: 3s; 
+    animation-duration: 3s; 
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both; 
+ }
+
+@keyframes bounceInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-2000px);
+    }
+    60% {
+       opacity: 1;
+       transform: translateX(30px);
+    }
+    80% {
+       transform: translateX(-10px);
+    }
+    100% {
+       transform: translateX(0);
+    }
+}
+
+@keyframes bounceUpDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    60% {
+       opacity: 0.6;
+       transform: translateY(30px);
+    }
+    80% {
+       opacity: 0.8;
+       transform: translateY(-10px);
+    }
+    100% {
+       opacity: 0.2;
+       transform: translateY(0);
+    }
+}
+ 
+.bounceInLeft {
+    -webkit-animation-name: bounceInLeft;
+    animation-name: bounceInLeft;
+}
+
+.bounceUpDown {
+    /* -webkit-animation-name: bounceUpDown; */
+    animation: bounceUpDown 10s infinite;
+}

@@ -1,0 +1,81 @@
+<div class="liveTrackDiv">
+  <app-navbar></app-navbar>
+  <div class="mainDiv" *ngIf="trackORmap == 1">
+    <div class="trackDiv">
+      <div class="trackCard">
+        <div class="cardHead">
+          <h3>LIVE TRACKING</h3>
+        </div>
+        <div class="cardBody">
+          <input type="text" class="input-lg" placeholder="Enter Your Ticket Number">
+          <h4 class="blackColor">OR</h4>
+          <input type="text" class="input-lg" placeholder="Enter Your Mobile Number">
+          <div class="trackDiv">
+            <button type="button" (click)="trackDetails()" class="btn btn-primary btn-lg">
+              <span>TRACK</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mainDivSelect" *ngIf="trackORmap == 2">
+    <div class="trackDiv">
+      <div class="trackCard">
+        <div class="cardHead">
+          <h3>LIVE TRACKING</h3>
+        </div>
+        <div class="cardBody">
+          <h3>SELECT YOUR RIDE</h3>
+          <div class="eachRide" (click)="gotoTracking()">
+            <span class="fromSpan">FROM : </span>
+            <span class="placeSpan">HYD</span>
+            <span class="toSpan">TO : </span>
+            <span class="placeSpan">VIJ</span><br>
+            <span class="dateSpan">
+              <span>DATE: </span>
+              3rd Feb 2018
+            </span>
+          </div>
+          <div class="eachRide" (click)="gotoTracking()">
+            <span class="fromSpan">FROM : </span>
+            <span class="placeSpan">HYD</span>
+            <span class="toSpan">TO : </span>
+            <span class="placeSpan">VIJ</span><br>
+            <span class="dateSpan">
+              <span>DATE: </span>
+              3rd Feb 2018
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mainDivMap" *ngIf="trackORmap == 3">
+    <div class="googleMaps">
+      <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+      </agm-map>
+    </div>
+    <div class="driverDetails">
+      <div class="subDriverDetails">
+        <div class="driverCab">
+          <span>Driver Name : </span><br>
+          <span>Cab No : </span>
+        </div>
+        <div class="">
+          <span>Cab Name : </span><br>
+          <span>Boarding Time  : </span>
+        </div>
+        <div>
+          <span>Dropping Point : </span><br>
+          <span>Journey Hrs : </span>
+        </div>
+        <div>
+          <span>Driver No : </span><br>
+          <span>9988776655</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

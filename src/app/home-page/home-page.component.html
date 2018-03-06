@@ -1,0 +1,147 @@
+<div class="home-container" id="homePage" (window:keydown)="onKey($event)">
+  <div class="home-background" *ngIf="currentPage == 1">
+    <div class="bottom-background-container">
+      <div class="city-timeline-background"></div>
+    </div>
+  </div>
+  <app-navbar [currentValue]="currentPage" (notifyEventPageVal)="currentPageChange($event)"></app-navbar>
+  <div class="carImage" *ngIf="currentPage == 1">
+    <img src="assets/images/home/car.png" alt="">
+  </div>
+  <div class="carImage2" *ngIf="currentPage == 1">
+    <img src="assets/images/home/car2.png" alt="">
+  </div>
+  <div class="homeDiv" id="firstDiv"  *ngIf="currentPage == 1">
+    <div class="rideDiv animated bounceInLeft">
+      Ride with Us
+    </div>
+    <div class="userFields animated bounceInLeft">
+      <input class="input-lg home-page-input-fields" type="text" placeholder="From" [(ngModel)]="fromPlace">
+      <div class="transferDiv">
+        <span class="glyphicon glyphicon-transfer" id="icon"></span>
+      </div>
+      <input class="input-lg home-page-input-fields" type="text" placeholder="To" [(ngModel)]="toPlace">
+      <input class="input-lg home-page-input-fields" type="text" id="journeyInput" placeholder="Journey Date">
+      <div class="sunMoon pointer">
+        <img [src]="sunSRC" alt="" (click)="changeImg(1)">
+      </div>
+      <div class="sunMoon pointer">
+        <img [src]="moonSRC" alt="" (click)="changeImg(2)">
+      </div>
+    </div>
+    <div class="animated bounceInLeft">
+      <button type="button" class="btn btn-lg" id="checkFareBtn" (click)="checkFare()">Check Fare</button>
+    </div>
+    <div class="navigation-arrows rightArrow pointer" (click)="navigatePage(1)">
+      <img src="assets/right.png" class="" alt="">
+      <!-- <i class="fa fa-chevron-right" aria-hidden="true"></i> -->
+    </div>
+    <!-- <div class="leftArrow pointer">
+      <img src="assets/back.png" alt="">
+    </div> -->
+  </div>
+  <div class="secondDiv animated bounceInLeft" id="secondDiv" *ngIf="currentPage == 2">
+    <span class="flexGrow"></span>      
+    <h2>Start Your Ride in Our Cab at Bus Fare</h2>
+    <div class="videoDiv">
+      <video controls>
+        <source src="assets/zu.webm" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+    </div>
+    <span class="flexGrow"></span>
+    <div class="container" id="secondDivFooter">
+      <div class="row">
+        <div class="col-md-3">
+          <span class="font-weight-bold">FARE</span><br>
+          <span>Our fares are approxmate the same value as the bus bookings.you can compare our prices</span>
+        </div>
+        <div class="col-md-3">
+          <span>FARE</span><br>
+          <span>Our fares are approxmate the same value as the bus bookings.you can compare our prices</span>
+        </div>
+        <div class="col-md-3">
+          <span>FARE</span><br>
+          <span>Our fares are approxmate the same value as the bus bookings.you can compare our prices</span>
+        </div>
+        <div class="col-md-3">
+          <span>FARE</span><br>
+          <span>Our fares are approxmate the same value as the bus bookings.you can compare our prices</span>
+        </div>
+      </div>
+    </div>
+    <span class="flexGrow"></span>    
+    <div class="leftArrow2 navigation-arrows pointer" (click)="navigatePage(2)">
+      <img src="assets/back.png" class="opacity5" alt="">
+    </div>
+    <div class="rightArrow2 navigation-arrows pointer" (click)="navigatePage(3)">
+      <img src="assets/right.png" class="opacity5" alt="">
+    </div>
+  </div>
+  <div class="thirdDiv animated bounceInLeft" id="thirdDiv" *ngIf="currentPage == 3">
+    <span class="flexGrow"></span>          
+    <div>
+      <div class="textDiv">
+        <h3>Why</h3>
+        <h3>ZU RIDES ?</h3>
+        <p>A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once. If the knight ends on a square that is one knight's move from the beginning square (so that it could tour the board again immediately, following the same path), the tour is closed, otherwise it is open.</p>
+        <div class="whyZuDiv">
+          <div>
+            <img src="assets/icon2.png" alt="">
+            <h4>Perfect Fare</h4>
+            <p>A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once.A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once.</p>
+            <a href="">LEARN MORE</a>
+          </div>
+          <div>
+            <img src="assets/icon.png" alt="">
+            <h4>Exact time of Dropping</h4>
+            <p>A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once.A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once.</p>
+            <a href="">LEARN MORE</a>            
+          </div>
+        </div>
+      </div>
+      <div class="imageDiv">
+        <img src="assets/taxi.png" alt="" class="img-responsive">
+      </div>
+    </div>
+    <div class="leftArrow2 navigation-arrows pointer" (click)="navigatePage(4)">
+      <img src="assets/back.png" class="opacity5" alt="">
+    </div>
+    <div class="rightArrow2 navigation-arrows pointer" (click)="navigatePage(5)">
+      <img src="assets/right.png" class="opacity5" alt="">
+    </div>
+    <span class="flexGrow"></span>        
+  </div>
+  <div class="fourthDiv animated bounceInLeft" id="fourthDiv" *ngIf="currentPage == 4">
+    <span class="flexGrow"></span>              
+    <div>
+      <div class="appText">
+        <h1>Get Our APP</h1>
+        <p>Ride to anywhere in AP and Telengana</p>
+        <p>in cabs at bus Fare</p>
+        <div class="displayFlex">
+          <div class="androidDiv">
+            <div>
+              <i class="fa fa-android" aria-hidden="true"></i> DOWNLOAD
+            </div>
+          </div>
+          <p class="learnTag">LEARN MORE</p>
+        </div>
+      </div>                
+      <div class="appImage bounceUpDown">
+        <img src="assets/phone.png" alt="" class="img-responsive">
+      </div>
+    </div>
+    <span class="flexGrow-3"></span>  
+    <div class="whiteDiv displayFlex">
+      <div>
+        NEW
+      </div>
+      <p>Get exceting offers on mobile app</p>
+    </div>
+    <div class="leftArrow2 navigation-arrows pointer" (click)="navigatePage(6)">
+      <img src="assets/back.png" class="opacity5" alt="">
+    </div>
+  </div>
+  <div id="snackbar">Please fill all the fields.</div>
+</div>

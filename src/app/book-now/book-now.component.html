@@ -1,0 +1,424 @@
+<div class="bookNowDiv">
+  <app-navbar></app-navbar>
+  <div class="travel-nav">
+    <div class="travel-details">
+      <span class="travelling-name">
+        Travelling
+      </span>
+      <span>{{fromPlace}}</span> - <span>{{toPlace}}</span>
+    </div>
+    <div class="time">
+      <img src="assets/sunActive.png" alt="">
+    </div>
+    <div class="travel-date">
+      <span class="on-name">
+        On
+      </span>
+      <span>18th Jan 2018</span>
+    </div>
+    <div class="modify-container">
+      <span>modify</span>
+    </div>
+    <div class="flexGrow"></div>
+    <div class="all-filters">
+      <div>
+        <i class="fa fa-filter" aria-hidden="true"></i> Filter
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-sort ml10"></span> Sort
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-th ml10"></span> Thumb
+      </div>
+    </div>
+  </div>
+  <div class="loading-container" id="loadingContainer" *ngIf="showData"> 
+    <img src="assets/images/bookNow/carGif.gif" alt="">
+  </div>
+  <div class="data-container" *ngIf="!showData">
+    <div class="booking-info">
+      <div class="flexGrow"></div>
+      <div class="box-available"></div> 
+      <div class="text-available"> Available</div>
+      <div class="box-filling"></div>
+      <div class="text-filling"> Filling Fast</div>
+      <div class="box-sold"></div>
+      <div class="text-sold"> Solid Out</div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-container">
+        <div class="width-20p">
+          <span>Tata Vista</span><br>
+          <span>Driver Name:</span><br>
+          <span>No of Seats:</span><br>
+          <span>Car No:</span><br>
+          <span>Model No:</span><br>
+          <span>Successful Rides:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Boarding Point:</span><br>
+          <span>Boarding Time:</span><br>
+          <span>OUR RATING:</span><br>
+          <span>YOUR RATING:</span>
+        </div>
+        <div class="vl"></div>
+        <div class="width-20p">
+          <span>Car Travelling:</span><br>
+          <span>Route:</span>
+        </div>
+        <div class="width-20p">
+          <span>No of Seats</span><br>
+          <span>Available</span><br>
+          <span>05</span>
+        </div>
+        <div class="width-20p">
+          <button type="button" class="btn btn-default book-now-button" (click)="openModal()">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog2">
+      <div class="modal-content">
+        <div class="modal-images">
+          <div class="car-details pointer" (click)="activeState(1)" [ngClass]="{'activeLink': currentState == 1}">
+            <img src="assets/images/bookNow/carDetails.png" alt="">
+          </div>
+          <div class="user-details pointer" (click)="activeState(2)" [ngClass]="{'activeLink': currentState == 2}">
+            <img src="assets/images/bookNow/userDetails.png" alt="">
+          </div>
+          <div class="wallet-details pointer" (click)="activeState(3)" [ngClass]="{'activeLink': currentState == 3}">
+            <img src="assets/images/bookNow/walletDetails.png" alt="">
+          </div>
+          <div class="success-details pointer" (click)="activeState(4)" [ngClass]="{'activeLink': currentState == 4}">
+            <img src="assets/images/bookNow/successDetails.png" alt="">
+          </div>
+        </div>
+        <div class="modal-content-details" *ngIf="currentState == 1">
+          <div class="about-detail1">
+            <img src="assets/images/bookNow/frontFaceCar.png" alt=""> 
+            <span>No of seats available: <span class="yellow">23</span> </span>
+            <span class="flexGrow"></span>            
+            <span>User Rating: <span class="yellow">3.5</span> </span>
+            <span>Our Rating: <span class="yellow">4.0</span> </span>
+            <span>Distance travelled: <span class="yellow">2345 KM</span> </span>
+            <span class="flexGrow"></span>
+            <span>Safety Measures:</span> 
+            <span>1.</span> 
+            <span>2.</span> 
+            <span>3.</span>
+            <span class="flexGrow"></span>
+            <span class="flexGrow"></span>
+            <span class="terms-conditions">Terms and Conditions</span>
+          </div>
+          <div class="about-detail2">
+            <span>Cab Name:</span>
+            <span>Driver Name:</span>
+            <span>Cab No:</span>
+            <span>Driver License Number:</span>
+            <span>Total Seats:</span>
+            <span>No.of successful rides:</span>
+            <span class="flexGrow"></span>      
+            <span class="fs-20">SEATS REQUIRED</span>
+            <div class="total-seats">2</div>
+            <span class="flexGrow"></span>         
+            <span class="flexGrow"></span>      
+            <button type="button" class="btn btn-default book-now-button" >BOOK NOW</button>
+          </div>
+          <div class="travelling-through">
+            <span class="title">Travelling via cities</span>
+            <span class="flexGrow"></span>      
+            <span>Tadepalligudem</span>
+            <span class="flexGrow"></span>      
+            <span>Rajamundry</span>
+            <span class="flexGrow"></span>
+            <span>Vijayawada</span>
+            <span class="flexGrow"></span>   
+            <span>Srikakulam</span>          
+            <span class="flexGrow"></span>                  
+          </div>
+        </div>
+        <div class="modal-content-details" *ngIf="currentState == 2">
+          <div class="user-details-info">
+            <span class="flexGrow"></span>
+            <div class="about-user">
+              <input type="text" class="user-input-name" placeholder="Customer">
+              <input type="number" class="user-input-age" placeholder="Age">
+              <input type="text" class="user-input-gender" placeholder="Gender">
+            </div>
+            <span class="flexGrow"></span>
+            <div class="about-user">
+              <input type="text" class="user-input-name" placeholder="Customer">
+              <input type="number" class="user-input-age" placeholder="Age">
+              <input type="text" class="user-input-gender" placeholder="Gender">
+            </div>
+            <span class="flexGrow"></span>
+            <div class="user-address">
+              <input type="text" placeholder="Address">
+            </div>
+            <span class="flexGrow"></span>
+            <div class="user-street">
+              <input type="text" class="user-input-area" placeholder="Area">
+              <input type="text" class="user-input-city" placeholder="City">
+            </div>
+            <span class="flexGrow"></span>
+            <div class="user-dropping">
+              <input type="text" class="user-input-pincode" placeholder="Pincode">
+              <input type="text" class="user-input-dropping" placeholder="Dropping City">
+            </div>
+            <span class="flexGrow"></span>
+            <div class="user-details-save">
+              <button type="button" class="btn btn-default book-now-button">Save Details</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-content-details" *ngIf="currentState == 3">
+          <div class="card-details">
+            <h3>DEBIT / CREDIT CARD</h3>
+            <div class="user-card-name">
+              <input type="text" class="card-name" placeholder="Name of card">
+            </div>
+            <div class="user-card-number">
+              <input type="text" class="card-number" placeholder="Card Number">
+            </div>
+            <div class="user-card-date">
+              <input type="text" class="card-expire-data" placeholder="Expire Date (MM/YY)">
+              <input type="Number" class="card-cvv" placeholder="CVV">
+            </div>
+            <div class="cash-on-delivery">
+              <input type="checkbox" value="">Cash On Delivery
+            </div>
+            <div class="cash-on-delivery">
+              <input type="checkbox" value="">Pay Through Wallet
+            </div>
+            <div class="card-details-save">
+              <button type="button" class="btn btn-default book-now-button">Proceed to Pay</button>
+            </div>
+          </div>
+          <div class="your-details">
+            <h3>Your Details</h3>
+            <span class="flexGrow"></span>
+            <span>Name:</span>
+            <span class="flexGrow"></span>
+            <span>Phone No:</span>
+            <span class="flexGrow"></span>
+            <span>Address:</span>
+            <span class="flexGrow"></span>
+            <span>Boarding Point:</span>
+            <span class="flexGrow"></span>
+            <span>Boarding Time:</span>
+            <span class="flexGrow"></span>
+            <span>Droping Point:</span>
+            <span class="flexGrow"></span>
+            <span>Journey Time:</span>
+            <span class="flexGrow"></span>
+          </div>
+        </div>
+        <div class="modal-content-details" *ngIf="currentState == 4">
+          <div class="success-page">
+            <h2>Your Booking Confirmed</h2>
+            <div class="check">
+              <i class="fa fa-check" aria-hidden="true"></i>
+            </div>
+            <div class="booking-details">
+              <div class="header">
+                <span class="w-10">S.No</span> 
+                <span class="w-90-4">Name</span>
+                <span class="w-90-4">Boarding Point</span>
+                <span class="w-90-4">Dropping Point</span>
+                <span class="w-90-4">Boarding Time</span>
+              </div>
+              <div class="body-content">
+
+              </div>
+            </div>
+            <div>
+              Travel Time: <span class="yellow">23:58</span>
+            </div>
+            <div class="money-booking">
+              <div class="money">
+                <span>Basic Fare:</span>
+                <span>Tax:</span>
+                <span>Tax:</span>
+                <span>Tax:</span>
+                <span>Status: <span class="yellow">Paid</span></span>
+                <span class="space"></span>
+                <button type="button" class="btn btn-default book-now-button" routerLink="/liveTracking">GoTo Live Tracking Page</button>
+              </div>
+              <div class="get-details">
+                <h4>Get your Booking Details</h4>
+                <input type="text" class="input-get-details" placeholder="Email, Mobile no">
+                <div class="social-networks">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                  <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

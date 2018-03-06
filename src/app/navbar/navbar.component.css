@@ -1,0 +1,42 @@
+nav {
+    background-color: #007671;
+}
+
+.navbar-brand img {
+    height: 45px;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+}
+
+.whiteColor {
+    color: white !important;
+}
+
+.navbar-desktop-menu-item {
+    color: black;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.navbar-desktop-menu-item:hover {
+    color: #FFE900 !important;
+    background-color: transparent;
+}
+
+.nav > li > a:hover {
+    background-color: none !important;
+}
+
+.active {
+    color: #FFE900 !important;
+}
+
+.active a {
+    color: #FFE900 !important;
+}
+
+ul li a {
+    text-transform: uppercase;
+}
